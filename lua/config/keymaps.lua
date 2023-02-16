@@ -14,3 +14,6 @@ vim.api.nvim_create_user_command("OpenNotes", function()
 end, {})
 
 vim.keymap.set("n", "<leader>cn", vim.cmd.OpenNotes, { desc = "Open notes file for current branch" })
+
+-- Expand directory of the file in the current buffer in command mode
+vim.keymap.set("c", "%%", vim.fn.expand("%:h") .. "/", { desc = "Expand directory of current buffer" })
