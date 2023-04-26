@@ -17,3 +17,9 @@ vim.keymap.set("n", "<leader>cn", vim.cmd.OpenNotes, { desc = "Open notes file f
 
 -- Expand directory of the file in the current buffer in command mode
 vim.keymap.set("c", "%%", vim.fn.expand("%:p:h") .. "/", { desc = "Expand directory of current buffer" })
+
+-- Disable nvim-cmp completions for current buffer
+vim.keymap.set("n", "<leader>bc", function()
+  require("cmp").setup.buffer({ enabled = false })
+end, { desc = "Disable nvim-cmp for current buffer" })
+
