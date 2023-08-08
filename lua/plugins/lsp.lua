@@ -14,6 +14,7 @@ return {
             includeLib = true,
             includePaths = { "WCN/lib", "WCN/t/lib" },
             perlcriticEnabled = false,
+            perlParams = { "-T" }
           },
         },
       },
