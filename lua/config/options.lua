@@ -12,3 +12,6 @@ opt.spelllang = "en_gb" -- Proper English
 opt.swapfile = false -- Always have git
 opt.textwidth = 79
 opt.wrap = true -- Wrap not horizontal scroll
+opt.foldmethod = "expr"
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+opt.foldnestmax = 1
