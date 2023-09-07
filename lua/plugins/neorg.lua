@@ -3,15 +3,15 @@ return {
   build = ":Neorg sync-parsers",
   dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
-    require("neorg").setup {
+    require("neorg").setup({
       load = {
-        ["core.defaults"] = {}, -- Loads default behaviour
-        ["core.concealer"] = {
+        ["core.defaults"] = {},
+        ["core.concealer"] = {  -- Adds pretty icons
           config = {
             icon_preset = "diamond",
           },
-        }, -- Adds pretty icons to your documents
-        ["core.dirman"] = { -- Manages Neorg workspaces
+        },
+        ["core.dirman"] = { -- Manage workspaces
           config = {
             workspaces = {
               home = "~/notes/home",
@@ -21,7 +21,8 @@ return {
           },
         },
         ["core.summary"] = {}, -- Generates a summary for the current workspace
+        ["core.ui.calendar"] = {}, -- Adds calendar support
       },
-    }
+    })
   end,
 }
