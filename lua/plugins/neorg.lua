@@ -11,17 +11,20 @@ return {
             icon_preset = "diamond",
           },
         },
-        ["core.dirman"] = { -- Manage workspaces
+        ["core.dirman"] = {
           config = {
             workspaces = {
               home = "~/notes/home",
               work = "~/notes/work",
+              cookbook = "~/notes/recipe",
+              gàidhlig = "~/notes/gàidhlig",
             },
             default_workspace = "home",
           },
         },
-        ["core.summary"] = {}, -- Generates a summary for the current workspace
-        ["core.ui.calendar"] = {}, -- Adds calendar support
+        ["core.summary"] = {},
+        -- Needs nvim 0.10+
+        -- ["core.ui.calendar"] = {},
       },
     })
   end,
