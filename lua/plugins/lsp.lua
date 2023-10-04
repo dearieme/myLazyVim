@@ -18,6 +18,15 @@ return {
           },
         },
       },
+      lua_ls = {
+        settings = {
+          Lua = {
+            runtime = {
+              unicodeName = true,
+            },
+          },
+        },
+      },
     },
   },
 }
