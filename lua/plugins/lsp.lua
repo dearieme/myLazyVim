@@ -3,7 +3,6 @@
 return {
   "neovim/nvim-lspconfig",
   opts = {
-    autoformat = false,
     format = {
       timeout_ms = 5000,
     },
