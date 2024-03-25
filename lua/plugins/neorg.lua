@@ -1,12 +1,11 @@
 return {
   "nvim-neorg/neorg",
-  build = ":Neorg sync-parsers",
-  dependencies = { "nvim-lua/plenary.nvim" },
+  dependencies = { "luarocks.nvim" },
   config = function()
     require("neorg").setup({
       load = {
         ["core.defaults"] = {},
-        ["core.concealer"] = {  -- Adds pretty icons
+        ["core.concealer"] = { -- Adds pretty icons
           config = {
             icon_preset = "diamond",
           },
@@ -23,6 +22,7 @@ return {
           },
         },
         ["core.summary"] = {},
+        ["core.export"] = {},
         -- Needs nvim 0.10+
         -- ["core.ui.calendar"] = {},
       },

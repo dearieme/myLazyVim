@@ -1,19 +1,20 @@
-local spec = { -- the default when not invoked by the browser addon
+local spec = {
   "glacambre/firenvim",
+
+  -- Lazy load firenvim
+  lazy = not vim.g.started_by_firenvim,
+  module = false,
   build = function()
     vim.fn["firenvim#install"](0)
   end,
-  module = false, -- prevent other code to require("firenvim")
-  lazy = true, -- never load, except when lazy.nvim is building the plugin
 }
 
 if vim.g.started_by_firenvim == true then -- set by the browser addon
   spec = {
     { "noice.nvim", cond = false }, -- can't work with gui having ext_cmdline
     { "lualine.nvim", cond = false }, -- not useful in the browser
-    { "copilot.nvim", cond = false }, -- security: don't send all textarea contents to m$
+    { "copilot-cmp", cond = false }, -- security: don't send all textarea contents to m$
     vim.tbl_extend("force", spec, {
-      lazy = false, -- must load at start in browser
       opts = {
         localSettings = {
           [".*"] = {
