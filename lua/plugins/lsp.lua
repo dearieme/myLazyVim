@@ -6,6 +6,7 @@ return {
     format = {
       timeout_ms = 5000,
     },
+    autoformat = false,
     servers = {
       perlnavigator = {
         settings = {
@@ -13,7 +14,7 @@ return {
             includeLib = true,
             includePaths = { "WCN/lib", "WCN/t/lib" },
             perlcriticEnabled = false,
-            perlParams = { "-T" }
+            perlParams = { "-T" },
           },
         },
       },

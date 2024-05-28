@@ -4,7 +4,7 @@
 -- Add any additional options here
 
 vim.g.maplocalleader = "," -- Map local leader to comma
-vim.g.autoformat = 0 -- Disable autoformat
+vim.g.autoformat = false -- Disable autoformat
 
 local opt = vim.opt
 
