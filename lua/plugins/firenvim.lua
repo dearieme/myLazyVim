@@ -4,9 +4,7 @@ local spec = {
   -- Lazy load firenvim
   lazy = not vim.g.started_by_firenvim,
   module = false,
-  build = function()
-    vim.fn["firenvim#install"](0)
-  end,
+  build = ":call firenvim#install(0)",
 }
 
 if vim.g.started_by_firenvim == true then -- set by the browser addon
