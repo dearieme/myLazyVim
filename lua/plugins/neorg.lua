@@ -1,6 +1,5 @@
 return {
   "nvim-neorg/neorg",
-  dependencies = { "luarocks.nvim" },
   config = function()
     require("neorg").setup({
       load = {
