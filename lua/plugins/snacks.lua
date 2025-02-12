@@ -2,7 +2,7 @@
 return {
   "folke/snacks.nvim",
   keys = {
-    { "<leader>fl", LazyVim.pick("files", { dirs = { "./lib" } }), desc = "Find Files (./lib only)" },
-    { "<leader>sl", LazyVim.pick("live_grep", { dirs = { "./lib" } }), desc = "Grep (./lib only)" },
+    { "<leader>fl", LazyVim.pick("files", { cwd = "./lib" }), desc = "Find Files (./lib only)" },
+    { "<leader>sl", LazyVim.pick("live_grep", { cwd = "./lib" }), desc = "Grep (./lib only)" },
   },
 }
