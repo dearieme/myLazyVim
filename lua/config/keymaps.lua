@@ -23,3 +23,9 @@ vim.keymap.set("n", "<leader>bc", function()
   vim.api.nvim_buf_set_var(0, "completion", false)
 end, { desc = "Disable blink.cmp for current buffer" })
 
+-- Create a "terminal" group of keymaps for creating terminals
+require("which-key").add({
+  { "<leader>t", group = "terminal" },
+  { "<leader>ts", "<cmd>split | terminal<cr>", desc = "Open terminal in split window", mode = "n" },
+  { "<leader>tv", "<cmd>vsplit | terminal<cr>", desc = "Open terminal in vertical split window", mode = "n" },
+})
