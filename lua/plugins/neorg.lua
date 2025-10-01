@@ -14,8 +14,8 @@ return {
             workspaces = {
               home = "~/notes/home",
               work = "~/notes/work",
-              cookbook = "~/notes/recipe",
-              gàidhlig = "~/notes/gàidhlig",
+              cookbook = "~/notes/cookbook",
+              gàidhlig = "~/gd/notes",
             },
             default_workspace = "home",
           },
