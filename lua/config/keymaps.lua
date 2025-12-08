@@ -21,5 +21,9 @@ vim.keymap.set("c", "%%", vim.fn.expand("%:p:h") .. "/", { desc = "Expand direct
 -- Disable blink.cmp completions for current buffer
 vim.keymap.set("n", "<leader>bc", function()
   vim.api.nvim_buf_set_var(0, "completion", false)
+  -- Also disable copilot if it's enabled
+  if vim.fn.exists(":Copilot") == 2 then
+    vim.cmd("Copilot disable")
+  end
 end, { desc = "Disable blink.cmp for current buffer" })
 

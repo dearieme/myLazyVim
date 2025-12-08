@@ -13,7 +13,7 @@ opt.path:append("lib,t/lib") -- Help 'gf' find Perl libs
 opt.relativenumber = false -- I like actual line numbers
 opt.spelllang = "en_gb" -- Proper English
 opt.swapfile = false -- Always have git
-opt.textwidth = 79
+opt.textwidth = 100
 opt.wrap = true -- Wrap not horizontal scroll
 opt.foldmethod = "expr"
 opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
