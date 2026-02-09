@@ -1,5 +1,6 @@
 return {
   "nvim-neorg/neorg",
+  denpendencies = { "nvim-neorg/tree-sitter-norg", },
   config = function()
     require("neorg").setup({
       load = {
@@ -22,8 +23,7 @@ return {
         },
         ["core.summary"] = {},
         ["core.export"] = {},
-        -- Needs nvim 0.10+
-        -- ["core.ui.calendar"] = {},
+        ["core.ui.calendar"] = {},
       },
     })
   end,
