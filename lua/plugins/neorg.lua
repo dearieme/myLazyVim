@@ -1,7 +1,13 @@
 return {
   "nvim-neorg/neorg",
-  config = function()
-    require("neorg").setup({
+  lazy = false,
+  version = "*",
+  config = true,
+  dependencies = {
+    "nvim-neorg/tree-sitter-norg",
+    "nvim-neorg/tree-sitter-norg-meta",
+  },
+  opts = {
       load = {
         ["core.defaults"] = {},
         ["core.concealer"] = { -- Adds pretty icons
@@ -24,6 +30,5 @@ return {
         ["core.export"] = {},
         ["core.ui.calendar"] = {},
       },
-    })
-  end,
+    },
 }
