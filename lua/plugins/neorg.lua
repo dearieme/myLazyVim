@@ -18,12 +18,9 @@ return {
         ["core.dirman"] = {
           config = {
             workspaces = {
-              home = "~/notes/home",
-              work = "~/notes/work",
-              cookbook = "~/notes/cookbook",
-              gàidhlig = "~/gd",
+              gàidhlig = "~/Documents/gd"
             },
-            default_workspace = "home",
+            default_workspace = "gàidhlig",
           },
         },
         ["core.summary"] = {},

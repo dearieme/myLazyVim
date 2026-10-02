@@ -1,13 +1,10 @@
 local spec = {
   "glacambre/firenvim",
-
-  -- Lazy load firenvim
-  lazy = not vim.g.started_by_firenvim,
-  module = false,
   build = ":call firenvim#install(0)",
 }
 
 if vim.g.started_by_firenvim == true then -- set by the browser addon
+  vim.opt.guifont = "Maple Mono NF:h16"
   spec = {
     { "noice.nvim", cond = false }, -- can't work with gui having ext_cmdline
     { "lualine.nvim", cond = false }, -- not useful in the browser

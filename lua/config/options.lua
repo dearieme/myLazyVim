@@ -11,9 +11,9 @@ local opt = vim.opt
 opt.mouse = "" -- Mouse gets in the way
 opt.path:append("lib,t/lib") -- Help 'gf' find Perl libs
 opt.relativenumber = false -- I like actual line numbers
-opt.spelllang = "en_gb" -- Proper English
+opt.spelllang = "gd,en_gb" -- Gàidhlig and Proper English
 opt.swapfile = false -- Always have git
-opt.textwidth = 96
+opt.textwidth = 80
 opt.wrap = true -- Wrap not horizontal scroll
 opt.foldmethod = "expr"
 opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
