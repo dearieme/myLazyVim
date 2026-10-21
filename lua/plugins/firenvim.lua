@@ -4,7 +4,7 @@ local spec = {
 }
 
 if vim.g.started_by_firenvim == true then -- set by the browser addon
-  vim.opt.guifont = "Maple Mono NF:h16"
+  vim.opt.guifont = "Maple Mono NF:h11"
   spec = {
     { "noice.nvim", cond = false }, -- can't work with gui having ext_cmdline
     { "lualine.nvim", cond = false }, -- not useful in the browser
